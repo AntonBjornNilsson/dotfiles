@@ -18,6 +18,8 @@ Plugin 'nvie/vim-flake8'
 call vundle#end()
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
@@ -61,6 +63,8 @@ autocmd FileType python set autoindent
 "
 " make backspaces more powerfull
 set backspace=indent,eol,start
+
+set background=dark
 
 " All of your Plugins must be added before the following line
 
