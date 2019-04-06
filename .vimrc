@@ -14,6 +14,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 let g:ycm_autoclose_preview_window_after_completion=1
@@ -25,7 +26,7 @@ let g:ycm_key_list_previous_completion=[]
 " used Bundle instead of Plugin)
 
 " ...
-
+map <C-n> :NERDTreeToggle<CR>
 
 "------------Start Python PEP 8 stuff----------------
 "" Number of spaces that a pre-existing tab is equal to.
