@@ -1,13 +1,14 @@
-export PATH=$HOME/bin:/home/<name>/.local/bin:/usr/local/bin:/home/<name>/scripts:$PATH
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/home/antonni/.local/bin:/usr/local/bin:/home/antonni/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/<name>/.oh-my-zsh"
+export ZSH="/home/antonni/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="some theme"
+ZSH_THEME="axis-eastwood"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -60,7 +61,7 @@ ZSH_THEME="some theme"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/home/<name>/scripts/zshcustom
+ZSH_CUSTOM=/home/antonni/scripts/zshcustom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -71,6 +72,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+enable_proxy
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -96,11 +98,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pip=pip3    
-alias python=python3
+alias pip=pip3.7
+alias python=python3.7
 alias gca='git commit -v -a'
 alias gca!='git commit -v -a --amend'
 alias pushit='git push origin HEAD:refs/for/master'
-enable_proxy
 alias oneline="git log --oneline --graph --decorate --all"
-export PYTHONPATH=~/git/tools/
+alias antonni="/n/axis_people/antonni"
+alias deleteremote="git push origin --delete"
+
+export PYTHONPATH=~/git/tools/:~/git/tools/pyanalytics
+clear
+neofetch
