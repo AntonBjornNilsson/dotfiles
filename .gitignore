@@ -118,7 +118,7 @@ oe-logs
 oe-workdir
 singletask.lock
 
- 
+
 
 
 # Packages #
@@ -134,7 +134,7 @@ singletask.lock
 *.tar
 *.zip
 
- 
+
 
 # Logs and databases #
 ######################
@@ -142,7 +142,7 @@ singletask.lock
 *.sql
 *.sqlite
 
- 
+
 
 # OS generated files #
 ######################
@@ -154,10 +154,10 @@ singletask.lock
 ehthumbs.db
 Thumbs.db
 
- 
+
 
 # Editor stuff #
 ################
 .vscode/
 *.orig
- 
+*wget-log*
