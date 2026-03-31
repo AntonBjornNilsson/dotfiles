@@ -1,12 +1,21 @@
-cp .tmux.conf ~/.tmux.conf
-echo 'moved .tmux.conf'
-cp .vimrc ~/.vimrc
-echo 'moved .vimrc'
-cp .zshrc ~/.zshrc
-echo 'moved .zshrc'
-cp .gitignore ~/.gitignore
-echo 'moved .gitignore'
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-echo 'installed Vundle'
+#!/bin/bash
+
+all=(".tmux.conf" ".vimrc" ".zshrc" ".fzf.zsh" ".spaceshiprc.zsh")
+for i in "${all[@]}" ; do
+  rm -f $HOME/$i
+  ln -s $(realpath $i) $HOME/$i
+  echo "$i"
+done
+
+# apt
+xargs sudo apt install -y <apt-packages.txt
+
+chsh -s /usr/bin/zsh
+
+# Oneliners
+./oneliners.sh
+
+# brew
+xargs brew install < brew.txt
 
 echo 'Install complete, enjoy'
