@@ -1,6 +1,5 @@
 fastfetch
 btop
-spaceship
 kubectl
 fluxcd/tap/flux
 derailed/k9s/k9s
