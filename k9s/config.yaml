@@ -1,0 +1,41 @@
+k9s:
+  liveViewAutoRefresh: false
+  screenDumpDir: /home/antonni/Pictures/k9s-screens-antonni
+  refreshRate: 2
+  maxConnRetry: 5
+  readOnly: false
+  noExitOnCtrlC: true
+  ui:
+    enableMouse: false
+    headless: false
+    logoless: true
+    crumbsless: false
+    defaultsToFullScreen: True
+    noIcons: false
+  skipLatestRevCheck: true
+  disablePodCounting: false
+  shellPod:
+    image: busybox:1.35.0
+    namespace: default
+    limits:
+      cpu: 100m
+      memory: 100Mi
+    tty: true
+  imageScans:
+    enable: false
+    exclusions:
+      namespaces: []
+      labels: {}
+  logger:
+    tail: 1000
+    buffer: 10000
+    sinceSeconds: -1
+    textWrap: true
+    showTime: false
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70

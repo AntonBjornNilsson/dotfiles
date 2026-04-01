@@ -1,0 +1,21 @@
+k9s:
+  views:
+    # v1/pods:
+    #   columns:
+    #     - NAME
+    #     - READY
+    #     - STATUS
+    #     - RESTARTS
+    #     - IP
+    #     - NODE
+    #     - AGE
+    # v1/services:
+    #   columns:
+    #     - NAME
+    #     - TYPE
+    #     - CLUSTER-IP
+    #     - EXTERNAL-IP
+    #     - PORTS
+    #     - AGE
+    # pvc:
+
