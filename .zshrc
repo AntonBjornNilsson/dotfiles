@@ -19,6 +19,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 alias oneline="git log --oneline --graph --decorate --all"
 alias k=kubectl
 alias f=flux
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
 
 # Source
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

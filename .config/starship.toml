@@ -3,15 +3,7 @@
 continuation_prompt = "[▸▹ ](dimmed white)"
 
 format = """
-$hostname\
-$localip\
 $directory\
-$shlvl\
-$shell\
-$env_var\
-$jobs\
-$sudo\
-$username\
 $git_branch\
 $git_commit\
 $git_state\
@@ -26,9 +18,11 @@ $time\
 
 [character]
 success_symbol = '[ ➜](bold green)' 
+error_symbol = '[ ❯](bold red)'
 
 [directory]
 truncate_to_repo = false
+format = '\[[$path]($style)[$read_only]($read_only_style)\]'
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
@@ -112,7 +106,7 @@ format = '\[[+$added]($added_style)\]\[[-$deleted]($deleted_style)\]'
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
 
 [git_branch]
-format = '\[[$symbol$branch]($style)\]'
+format = '\[git\([$branch]($style)\)\]'
 
 [git_commit]
 format = '\[[\($hash$tag\)]($style)\]'
@@ -151,7 +145,7 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$branch]($style)\]'
 
 [hostname]
-format = '\[[$ssh_symbol($hostname)]($style)\] '
+format = '\[[$ssh_symbol($hostname)]($style)\]'
 disabled = false
 ssh_only = false
 

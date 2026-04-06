@@ -4,3 +4,4 @@ build-essential
 tmux
 vim
 tree
+net-tools

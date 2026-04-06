@@ -9,6 +9,7 @@ for i in "${all[@]}" ; do
 done
 
 # apt
+sudo apt update && sudo apt upgrade -y
 xargs sudo apt install -y <apt-packages.txt
 
 chsh -s /usr/bin/zsh
